@@ -1,7 +1,7 @@
-# The HEART-GeN Research Group
+# The HEART-GeN Lab
 
 At the **H**ealth **E**quity for **A**dvancing **R**esearch and **T**echnology
-using **Ge**nomic **N**euroscience (HEART-GeN) research group, our goal is to
+using **Ge**nomic **N**euroscience (HEART-GeN) Lab, our goal is to
 improve treatments for brain disorders with health disparities.
 
 While 99.99% of our genome is shared across global ancestral populations, the
