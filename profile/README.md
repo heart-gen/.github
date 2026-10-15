@@ -1,126 +1,95 @@
 # The HEART-GeN Lab
 
-At the **H**ealth **E**quity for **A**dvancing **R**esearch and **T**echnology
-using **Ge**nomic **N**euroscience (HEART-GeN) Lab, our goal is to
-improve treatments for brain disorders with health disparities.
+**Health Equity for Advancing Research and Technology using Genomic Neuroscience (HEART-GeN)**
 
-While 99.99% of our genome is shared across global ancestral populations, the
-very small fraction unique to a specific ancestral population can affect how
-genes turn on or off. We use this human variation to find these genes that may
-play a role in explaining health disparities for brain disorders.
+**Understanding how human genomic variation shapes brain biology—from RNA regulation to cellular function—and translating those insights into more equitable neuroscience.**
 
-## Research Vision
+The HEART-GeN Lab integrates human genetics, transcriptomics, epigenomics, statistical modeling, and experimental systems to investigate the molecular mechanisms of neurological and psychiatric disorders. We study how genetic variation, ancestry, development, aging, and biological context shape gene regulation in the human brain.
 
-Our lab aims to improve therapeutics for underrepresented communities by
-investigating the influence of genetic ancestry on molecular signatures
-in the brain. We use computational tools and disease-relevant models
-such as postmortem brain tissues, brain organoids, iPSC-derived glial
-cells to uncover how genetic ancestry impacts complex traits in the brain.
-This integrative approach provides insights into the interplay between
-genetic and environmental factors in complex brain disorders.
+Our research is motivated by a central challenge: **discoveries in genomic neuroscience must be biologically informative and generalizable across the populations they aim to serve.** Genetic ancestry is one dimension of human genomic variation—not a biological proxy for race or a complete explanation for health disparities. We seek to understand molecular mechanisms while recognizing that social, environmental, and structural factors also shape brain health and access to care.
 
-We collaborate with the community to direct our efforts in the development
-of impactful research. Therefore, one of the main focuses of our lab is
-to train a diverse group of next-generation computational scientists
-with the ability to communicate our findings with the community.
+## Research vision
 
-## Research Interests
+We aim to move **from genetic variation to regulatory mechanisms, cellular consequences, and disease-relevant biology**. Rather than relying on gene-level expression alone, we examine how genetic effects operate through transcript choice, splicing, DNA methylation, cell-type-specific regulatory programs, and developmental transitions.
 
-### Genetic ancestry in the brain
+Three principles connect our work:
 
-In neuroscience and genomics, individuals with recent African ancestry (AA)
-account for less than 5% of large-scale research cohorts for brain disorders
-but are 20% more likely to experience a major mental health crisis.
-Furthermore, divergent responses to antipsychotics between AA and European
-ancestry (EA) have been linked to genetic differences. Understanding these
-genetic and/or regulatory differences between AA and EA in the human brain,
-is essential to the development of effective neurotherapeutics and
-potentially could decrease health disparities for neurological disorders.
+- **Mechanism over association.** Prioritize the regulatory events and cellular states through which genetic variation may influence brain function and disease.
+- **Generalizability by design.** Investigate ancestry-associated and context-dependent effects, evaluate transferability across cohorts, and develop tools that enable more inclusive genomic analyses.
+- **Computation linked to biology.** Combine interpretable statistical and machine-learning methods with postmortem human brain datasets, single-cell and spatial genomics, cerebral organoids, and induced pluripotent stem cell (iPSC)-derived models.
 
-### Schizophrenia
-#### Caudate nucleus and schizophrenia
-Most studies of gene expression in the brain of individuals with schizophrenia
-have focused on cortical regions. However, subcortical nuclei such as the
-striatum are prominently implicated in the disease, and current antipsychotic
-drugs target the striatum’s dense dopaminergic innervation.
+Our long-term goal is to generate testable mechanisms and reusable resources that can inform future approaches to prevention, diagnosis, and treatment.
 
-#### Sex differences and schizophrenia
-Schizophrenia is a complex neuropsychiatric disorder with sexually dimorphic
-features, including differential symptomatology, drug responsiveness, and male
-incidence rate. To date, only the prefrontal cortex has been studied in
-large-scale transcriptome analyses for sex differences in schizophrenia.
+## Research directions
 
-### Software development
+### Ancestry-aware regulatory genomics
 
-#### RFMix-reader: Accelerated reading and processing for local ancestry studies
+**How does human genetic diversity shape gene regulation across brain regions, cell types, and the lifespan?**
 
-Local ancestry inference is crucial for understanding population history and
-disease genetics, especially for eQTL studies in admixed populations. While
-RFMix is widely used, handling its output for large datasets is challenging due
-to high memory and processing demands. To address this, `RFMix-reader`
-efficiently processes large local ancestry datasets, leveraging GPUs for speed
-and minimizing memory usage, enabling deeper insights into human health and
-health disparities.
+We integrate genetic ancestry, local ancestry, expression quantitative trait loci (eQTLs), allele-specific expression, and transcript-level measurements to study regulatory variation in diverse cohorts. We also investigate how ancestry-associated regulatory effects interact with aging and other biological contexts, with attention to neurodegenerative and psychiatric disease.
 
-PyPI: <https://pypi.org/project/rfmix-reader/>
+A major aim is to distinguish reproducible genetic mechanisms from cohort-specific or technical effects, improving the interpretability and portability of genomic discoveries.
 
-Documentation: <http://rfmix-reader.readthedocs.io/>
+### RNA isoforms and neuronal maturation
 
-#### py-qvalue: Python version of q-value
-`py-qvalue` is a Python package that provides a robust solution for controlling
-the False Discovery Rate (FDR) in multiple hypothesis testing. This package is a
-direct port of the well-regarded `qvalue` R package and is designed for
-researchers who need to estimate the proportion of true null hypotheses
-($\pi_0$), calculate q-values, and estimate local false discovery rates (lfdr).
-By implementing key functions like `qvalue`, `pi0est`, and `lfdr`, it enables
-straightforward FDR control within the Python ecosystem, making it an essential
-tool for statistical analysis and multiple hypothesis testing workflows.
+**When does transcript choice change cellular function rather than simply mark a cell state?**
 
-PyPI: <https://pypi.org/project/py-qvalue/>
+Genes produce multiple RNA isoforms through alternative splicing and transcript usage. We investigate how coordinated isoform transitions accompany brain development and aging, whether specific transitions regulate neuronal maturation, and how disease-associated genetic variants perturb these programs.
 
-Documentation: <https://github.com/heart-gen/py-qvalue>
+This research connects human brain transcriptomics, statistical genetics, isoform-aware computational methods, and experimental models to identify transcript-level mechanisms that gene-abundance analyses can miss.
 
-#### dRFEtools: dynamic recursive feature elimination for omics
+### Schizophrenia and neurodevelopmental mechanisms
 
-Technology advances have generated larger ‘OMICs datasets with applications
-for machine learning. Even so, sample availability results in smaller sample
-sizes compared to features. Dynamic recursive feature elimination (RFE)
-provides a flexible feature elimination framework to tackle this problem.
-`dRFEtools` provides an interpretable and flexible tool to gain biological
-insights from ‘OMICs data using machine learning.
+**How do genetic and molecular changes alter the development and function of disease-relevant neural cell populations?**
 
-PyPI: <https://pypi.org/project/drfetools/>
+We study schizophrenia across postmortem human brain regions—including the caudate nucleus, dorsolateral prefrontal cortex, and hippocampus—and experimental models of human brain development. Our work addresses cell-type-specific molecular regulation, sex-associated differences, cortical projection-neuron maturation, and relationships between developmental programs and disease risk.
 
-Documentation: <http://drfetools.readthedocs.io/>
+In collaboration with experimental neuroscientists, we integrate single-cell RNA sequencing, cerebral organoids, and functional measurements to connect molecular findings to cellular phenotypes and testable hypotheses.
 
-### Collaborations
+### Brain aging, epigenomics, and neurodegeneration
 
-#### Angiotensin II receptors in the human lung
+**How do regulatory and epigenetic programs change with age, and how might those changes contribute to disease vulnerability?**
 
-Understanding the precise distribution and function of angiotensin receptors
-within the lung is crucial for developing effective treatments for lung diseases
-like COPD and IPF. Here, our goal is to provide a foundational framework by
-mapping the expression patterns of *AGTR1* and *AGTR2* across different lung cell
-types and identifying their involvement in specific disease states. Our findings
-will offer new insights into the complex role of the renin-angiotensin system in
-lung health and disease, paving the way for targeted therapeutic interventions.
+We examine age-related changes in gene expression, RNA processing, and DNA methylation across human brain regions. Our work includes ancestry-by-aging interactions, allele-specific regulatory effects, local genetic influences on DNA methylation, and molecular processes relevant to Alzheimer's disease and related dementias.
 
-Collaborator(s):
-- Enid R. Neptune, M.D., at Johns Hopkins University School of Medicine
+We distinguish predictive molecular signatures from mechanisms supported by genetic, longitudinal, or experimental evidence.
 
-#### Cerebral organoids for schizophrenia
+### Interpretable genomic AI and reproducible methods
 
-While significant advances have been made in bulk postmortem functional genomics
-for schizophrenia, understanding cell-specific molecular alterations is still
-challenging due to the cellular heterogeneity of brain tissue. Single-cell and
-single-nucleus RNA-sequencing has helped by revealing disease-associated changes
-and cell type-specific enrichment of schizophrenia risk genes. Additionally,
-cerebral organoids, which model early human brain development and are amenable
-to genetic manipulation, provide a powerful platform for studying cell
-type-specific disease mechanisms in a controlled environment. By combining these
-approaches, we can examine the specific cellular differences in schizophrenia
-within cerebral organoids.
+**How can computational tools reveal biologically meaningful regulatory structure while remaining rigorous, scalable, and reusable?**
 
-Collaborator(s):
-- Richard E. Straub, Ph.D., at Lieber Institute for Brain Development
-- Brady J. Maher, Ph.D., at Lieber Institute for Brain Development
+We develop statistical genetics software, scalable multi-omics workflows, and interpretable machine-learning approaches for high-dimensional data. These methods span local-ancestry-aware QTL mapping, transcript-network inference, genetic contributions to methylation, and evaluation of single-cell state mapping.
+
+A recurring focus is rigorous benchmarking, uncertainty, external validation, transparent failure modes, and reproducible research.
+
+## Selected open-source software
+
+| Software | Purpose |
+| --- | --- |
+| **[IsoGraph](https://github.com/heart-gen/IsoGraph)** | Identifies coordinated transcript-switching and gene-abundance programs through isoform-aware network analysis. |
+| **[RFMix-reader](https://github.com/heart-gen/rfmix_reader)** | Provides memory-efficient access to RFMix, FLARE, and related local-ancestry outputs, with lazy data access and optional GPU-backed downstream operations. |
+| **[localQTL](https://github.com/heart-gen/localQTL)** | Supports scalable, local-ancestry-aware QTL analysis, including GPU-enabled workflows and genetic fine-mapping utilities. |
+| **[GENBoostGPU](https://github.com/heart-gen/GENBoostGPU)** | Provides computational workflows for evaluating local genetic contributions to DNA methylation, including relative ranking and out-of-fold prediction. |
+| **[py-qvalue](https://github.com/heart-gen/py-qvalue)** | Implements q-value estimation and false discovery rate methods in Python. |
+| **[dRFEtools](https://pypi.org/project/drfetools/)** | Supports interpretable feature selection for high-dimensional omics through dynamic recursive feature elimination. |
+
+Explore our [GitHub repositories](https://github.com/orgs/heart-gen/repositories) for software, analysis code, documentation, and reproducibility resources.
+
+## Collaborative science
+
+Our research bridges computational genomics, human neuroscience, and experimental biology. Examples include:
+
+- **Cerebral organoids and schizophrenia:** Working with Richard E. Straub, Ph.D., and Brady J. Maher, Ph.D. (Lieber Institute for Brain Development), to study neurodevelopmental and cell-type-specific molecular changes in schizophrenia.
+- **Lung cellular genomics:** Working with Enid R. Neptune, M.D. (Johns Hopkins University School of Medicine), to examine angiotensin signaling and stromal and pericyte biology in human lung health and disease.
+
+We welcome collaborations that connect statistical or computational discoveries to independent datasets, molecular perturbations, and functional experiments.
+
+## Mentorship, equity, and open science
+
+Training and community engagement are central to the HEART-GeN mission. We support trainees from varied backgrounds in developing skills in **computational biology, statistical genetics, scientific reasoning, reproducible software, and clear communication**. We emphasize rigorous interpretation, collaborative mentorship, and responsible engagement with the communities affected by the disorders we study.
+
+We aim to share methods and results openly whenever permitted by data-use agreements, participant privacy protections, and collaborators' publication plans.
+
+---
+
+**Explore our work:** [HEART-GeN on GitHub](https://github.com/heart-gen) · [Repositories](https://github.com/orgs/heart-gen/repositories)
