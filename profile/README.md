@@ -2,7 +2,7 @@
 
 **Health Equity for Advancing Research and Technology using Genomic Neuroscience (HEART-GeN)**
 
-**Understanding how human genomic variation shapes brain biology—from RNA regulation to cellular function—and translating those insights into more equitable neuroscience.**
+**Understanding how human genomic variation shapes brain biology — from RNA regulation to cellular function—and translating those insights into more equitable neuroscience.**
 
 The HEART-GeN Lab integrates human genetics, transcriptomics, epigenomics, statistical modeling, and experimental systems to investigate the molecular mechanisms of neurological and psychiatric disorders. We study how genetic variation, ancestry, development, aging, and biological context shape gene regulation in the human brain.
 
